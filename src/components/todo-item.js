@@ -1,30 +1,32 @@
 import React from 'react'
 
-const TodoItem = (props) => {
-  return (
-    <div
-      style={{
-        borderBottom: '0.1px solid',
-        margin: '2px auto',
-        alignItems: 'center'
-      }}
-    >
-      <input
-        type="checkbox"
+class TodoItem extends React.Component {
+  render() {
+    return (
+      <div
         style={{
-          float: 'left',
-        }}
-        checked={props.data.completed}
-      />
-      <p
-        style={{
-          paddingLeft: 30
+          borderBottom: '0.1px solid',
+          margin: '2px auto',
+          alignItems: 'center'
         }}
       >
-        {props.data.text}
-      </p>
-    </div>
-  )
+        <input
+          type="checkbox"
+          style={{
+            float: 'left',
+          }}
+          checked={this.props.data.completed}
+        />
+        <p
+          style={{
+            paddingLeft: 30
+          }}
+        >
+          {this.props.data.text}
+        </p>
+      </div>
+    )
+  }
 }
 
 export default TodoItem
