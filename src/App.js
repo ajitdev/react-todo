@@ -1,24 +1,22 @@
 import React from 'react'
+import TodoItem from './components/todo-item'
 
 function App() {
   return (
-    <div>
-      <div>
-        <input type="checkbox" />
-        <span>Todo 1</span>
-      </div>
-      <div>
-        <input type="checkbox" />
-        <span>Todo 2</span>
-      </div>
-      <div>
-        <input type="checkbox" />
-        <span>Todo 3</span>
-      </div>
-      <div>
-        <input type="checkbox" />
-        <span>Todo 4</span>
-      </div>
+    <div
+      style={{
+        width: '50%',
+        height: '100%',
+        margin: 'auto',
+        padding: '40px',
+        backgroundColor: 'whitesmoke',
+      }}
+    >
+      <TodoItem />
+      <TodoItem />
+      <TodoItem />
+      <TodoItem />
+      <TodoItem />
     </div>
   )
 }
