@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TodoItem = () => {
+const TodoItem = (props) => {
   return (
     <div
       style={{
@@ -14,13 +14,14 @@ const TodoItem = () => {
         style={{
           float: 'left',
         }}
+        checked={props.data.completed}
       />
       <p
         style={{
           paddingLeft: 30
         }}
       >
-        Todo 1
+        {props.data.text}
       </p>
     </div>
   )

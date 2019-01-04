@@ -1,7 +1,9 @@
 import React from 'react'
 import TodoItem from './components/todo-item'
+import todosData from './data/todosData'
 
 function App() {
+  const todoItems = todosData.map(item => <TodoItem key={item.id} data={item} />)
   return (
     <div
       style={{
@@ -12,11 +14,8 @@ function App() {
         backgroundColor: 'whitesmoke',
       }}
     >
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
+      {/* Render array of components directly */}
+      {todoItems}
     </div>
   )
 }
