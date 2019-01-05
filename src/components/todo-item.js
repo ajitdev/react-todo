@@ -20,7 +20,8 @@ class TodoItem extends React.Component {
         />
         <p
           style={{
-            paddingLeft: 30
+            paddingLeft: 30,
+            textDecoration: this.props.data.completed ? 'line-through' : 'none'
           }}
         >
           {this.props.data.text}
