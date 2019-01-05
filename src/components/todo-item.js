@@ -16,6 +16,7 @@ class TodoItem extends React.Component {
             float: 'left',
           }}
           checked={this.props.data.completed}
+          onChange={() => this.props.handleChange(this.props.data.id)}
         />
         <p
           style={{
